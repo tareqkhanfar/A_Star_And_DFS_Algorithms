@@ -7,7 +7,7 @@ public class VertexFromTo {
 
     public VertexFromTo( Vertex w , int cost) {
         this.to = w;
- this.cost = cost;
+        this.cost = cost;
     }
 
 

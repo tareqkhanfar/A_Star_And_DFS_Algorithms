@@ -1,6 +1,7 @@
 package com.khanfar.astar_and_dfs;
 
 import com.khanfar.astar_and_dfs.Graph.Astar;
+import com.khanfar.astar_and_dfs.Graph.Vertex;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -21,7 +22,10 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
         Astar astar = new Astar() ;
         astar.configureGraph();
-        astar.printGraph();
-       // launch();
+        astar.findShortestPath("S");
+     //   astar.printGraph();
+        astar.printPath(new Vertex());
+
+        // launch();
     }
 }
