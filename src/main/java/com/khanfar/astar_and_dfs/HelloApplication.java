@@ -1,6 +1,8 @@
 package com.khanfar.astar_and_dfs;
 
 import com.khanfar.astar_and_dfs.Graph.Astar;
+import com.khanfar.astar_and_dfs.Graph.DFS;
+import com.khanfar.astar_and_dfs.Graph.Graph;
 import com.khanfar.astar_and_dfs.Graph.Vertex;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -20,12 +22,19 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        Astar astar = new Astar() ;
-        astar.configureGraph();
+        Graph graph = new Graph();
+        graph.configureGraph("file.txt");
+        Astar astar = new Astar(graph) ;
         astar.findShortestPath("S");
      //   astar.printGraph();
         astar.printPath(new Vertex());
 
+
+        Graph graph1 = new Graph() ;
+        graph1.configureGraph("ewf");
+
+        DFS dfs = new DFS(graph1);
+        System.out.println(dfs.findPath("S" , "G"));
         // launch();
     }
 }
