@@ -106,7 +106,11 @@ public class Graph {
         }
 
     }
-
+    public void resetVisited() {
+        for (Vertex vertex : graph.keySet()) {
+            vertex.setVisited(false);
+        }
+    }
 
     public void loadDistanceAir(String fileName , String dest) {
         /*
@@ -123,8 +127,8 @@ public class Graph {
         }
 
          */
-        Vertex vDest = search(dest);
 
+        Vertex vDest = search(dest);
         for (Vertex vertex : graph.keySet()){
             int airDistance = distance(vertex.getLatitude() , vDest.getLatitude() , vertex.getLongitude() , vDest.getLongitude());
             vertex.setH_Cost(airDistance);

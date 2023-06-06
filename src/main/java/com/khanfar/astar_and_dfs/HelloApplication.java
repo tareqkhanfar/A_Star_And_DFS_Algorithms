@@ -15,8 +15,8 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("start.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
@@ -24,6 +24,7 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) throws FileNotFoundException {
 
+        /*
         Graph graph = new Graph();
         graph.loadDataFromFile("D:\\Artificial Intelligence\\AStar_And_DFS\\cities.csv");
         graph.loadDistanceRoads("D:\\Artificial Intelligence\\AStar_And_DFS\\roads.csv");
@@ -34,13 +35,16 @@ public class HelloApplication extends Application {
         astar.printPath("Nablus");
 
 
-       Graph graph1 = new Graph() ;
+        Graph graph1 = new Graph() ;
         graph1.loadDataFromFile("D:\\Artificial Intelligence\\AStar_And_DFS\\cities.csv");
         graph1.loadDistanceRoads("D:\\Artificial Intelligence\\AStar_And_DFS\\roads.csv");
         graph1.loadDistanceAir("D:\\Artificial Intelligence\\AStar_And_DFS\\airDistance.csv" , "Nablus");
 
         DFS dfs = new DFS(graph1);
         System.out.println(dfs.findPath("Ramallah" , "Nablus"));
-        // launch();
+
+
+         */
+         launch();
     }
 }

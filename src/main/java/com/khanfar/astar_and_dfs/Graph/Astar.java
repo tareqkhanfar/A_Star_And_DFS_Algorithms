@@ -11,21 +11,24 @@ public Astar (Graph graph) {
 
 
 
-public void printPath (String dest) {
+public String printPath (String dest) {
     Vertex Vertexdest = search(dest);
     Stack<Vertex> stack = new Stack<>() ;
 
 Vertex current = Vertexdest ;
+    StringBuilder builder = new StringBuilder();
+    builder.append(dest+"-->");
 
 while (current != null) {
 stack.push(current) ;
 current = current.getParent() ;
 }
 while (!stack.isEmpty()){
-    System.out.println(stack.pop().getLabel());
+    builder.append(stack.pop().getLabel()+"-->");
+    System.out.println("A * "+stack.pop().getLabel());
 }
+return builder.toString();
 
-    System.out.println("With cost : "+Vertexdest.getG_Cost());
 }
 
 
