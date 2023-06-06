@@ -8,6 +8,24 @@ public class Vertex implements Comparable<Vertex>{
     private double H_Cost =0;
     private double G_Cost = 0 ;
     private double F_Cost=0 ;
+    private double longitude ;
+    private double latitude ;
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
 
     public double getF_Cost() {
         return F_Cost;
@@ -36,6 +54,15 @@ public class Vertex implements Comparable<Vertex>{
         this.H_Cost = Hcost ;
         this.G_Cost = Integer.MAX_VALUE;
         this.F_Cost = Integer.MAX_VALUE;
+    }
+    public Vertex(String Label , double longitude , double latitude) {
+
+        this.isVisited = false ;
+        this.Label = Label;
+        this.G_Cost = Integer.MAX_VALUE;
+        this.F_Cost = Integer.MAX_VALUE;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public Vertex getParent() {

@@ -3,9 +3,9 @@ package com.khanfar.astar_and_dfs.Graph;
 public class VertexFromTo {
 
     private Vertex to ;
-    private int cost ;
+    private double cost ;
 
-    public VertexFromTo( Vertex w , int cost) {
+    public VertexFromTo( Vertex w , double cost) {
         this.to = w;
         this.cost = cost;
     }
@@ -19,11 +19,11 @@ public class VertexFromTo {
         this.to = to;
     }
 
-    public int getCost() {
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 

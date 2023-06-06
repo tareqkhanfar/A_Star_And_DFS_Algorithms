@@ -11,11 +11,11 @@ public Astar (Graph graph) {
 
 
 
-public void printPath (Vertex dest) {
-    dest = search("G");
+public void printPath (String dest) {
+    Vertex Vertexdest = search(dest);
     Stack<Vertex> stack = new Stack<>() ;
 
-Vertex current = dest ;
+Vertex current = Vertexdest ;
 
 while (current != null) {
 stack.push(current) ;
@@ -25,7 +25,7 @@ while (!stack.isEmpty()){
     System.out.println(stack.pop().getLabel());
 }
 
-    System.out.println("With cost : "+dest.getG_Cost());
+    System.out.println("With cost : "+Vertexdest.getG_Cost());
 }
 
 
