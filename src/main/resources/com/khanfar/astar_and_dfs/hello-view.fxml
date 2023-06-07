@@ -23,21 +23,21 @@
          </styleClass>
       </Button>
 
-      <TextArea id="tf" fx:id="path" layoutX="1088.0" layoutY="225.0" prefHeight="204.0" prefWidth="264.0" promptText="PATH">
+      <TextArea id="tf" fx:id="path" layoutX="973.0" layoutY="225.0" prefHeight="204.0" prefWidth="379.0" promptText="PATH">
          <styleClass>
             <String fx:value="t" />
             <String fx:value="selects" />
          </styleClass>
       </TextArea>
 
-      <TextField fx:id="distance" layoutX="1088.0" layoutY="470.0" prefHeight="59.0" prefWidth="264.0" promptText="DISTANCE">
+      <TextField fx:id="distance" layoutX="973.0" layoutY="470.0" prefHeight="59.0" prefWidth="379.0" promptText="DISTANCE">
          <styleClass>
             <String fx:value="t" />
             <String fx:value="selects" />
          </styleClass>
       </TextField>
 
-      <Label layoutX="811.0" layoutY="19.0" prefHeight="35.0" prefWidth="205.0" text="Select Algorithm" />
+      <Label layoutX="770.0" layoutY="19.0" prefHeight="35.0" prefWidth="345.0" text="Select Algorithm" />
       <RadioButton fx:id="a_Star" layoutX="824.0" layoutY="63.0" mnemonicParsing="false" text="A *" />
       <RadioButton fx:id="dfs" layoutX="928.0" layoutY="63.0" mnemonicParsing="false" text="DFS" />
 
@@ -45,7 +45,7 @@
       <Label layoutX="754.0" layoutY="100.0" prefHeight="35.0" prefWidth="157.0" text="A* Runtime: " />
       <TextField fx:id="a_star_runtime" editable="false" layoutX="911.0" layoutY="100.0" prefHeight="35.0" prefWidth="100.0" />
 
-      <Label layoutX="754.0" layoutY="140.0" prefHeight="35.0" prefWidth="157.0" text="DFS Runtime: " />
+      <Label layoutX="732.0" layoutY="140.0" prefHeight="35.0" prefWidth="179.0" text="DFS Runtime: " />
       <TextField fx:id="dfs_runtime" editable="false" layoutX="911.0" layoutY="140.0" prefHeight="35.0" prefWidth="100.0" />
    </children>
 </AnchorPane>
