@@ -15,23 +15,37 @@
       <ScrollPane fx:id="displayImage" prefHeight="640.0" prefWidth="715.0" />
       <ComboBox fx:id="src" layoutX="1145.0" layoutY="36.0" onAction="#srcOnAction" prefHeight="35.0" prefWidth="205.0" promptText="SRC" styleClass="selects" />
       <ComboBox fx:id="dest" layoutX="1147.0" layoutY="95.0" onAction="#destOnAction" prefHeight="35.0" prefWidth="205.0" promptText="TARGET" styleClass="selects" />
+
       <Button layoutX="1144.0" layoutY="156.0" mnemonicParsing="false" onAction="#runOnAction" prefHeight="35.0" prefWidth="213.0" text="RUN">
          <styleClass>
             <String fx:value="selects" />
             <String fx:value="run" />
-         </styleClass></Button>
+         </styleClass>
+      </Button>
+
       <TextArea id="tf" fx:id="path" layoutX="1088.0" layoutY="225.0" prefHeight="204.0" prefWidth="264.0" promptText="PATH">
          <styleClass>
             <String fx:value="t" />
             <String fx:value="selects" />
-         </styleClass></TextArea>
+         </styleClass>
+      </TextArea>
+
       <TextField fx:id="distance" layoutX="1088.0" layoutY="470.0" prefHeight="59.0" prefWidth="264.0" promptText="DISTANCE">
          <styleClass>
             <String fx:value="t" />
             <String fx:value="selects" />
-         </styleClass></TextField>
+         </styleClass>
+      </TextField>
+
       <Label layoutX="811.0" layoutY="19.0" prefHeight="35.0" prefWidth="205.0" text="Select Algorithm" />
       <RadioButton fx:id="a_Star" layoutX="824.0" layoutY="63.0" mnemonicParsing="false" text="A *" />
       <RadioButton fx:id="dfs" layoutX="928.0" layoutY="63.0" mnemonicParsing="false" text="DFS" />
+
+      <!-- Added fields for displaying runtimes -->
+      <Label layoutX="754.0" layoutY="100.0" prefHeight="35.0" prefWidth="157.0" text="A* Runtime: " />
+      <TextField fx:id="a_star_runtime" editable="false" layoutX="911.0" layoutY="100.0" prefHeight="35.0" prefWidth="100.0" />
+
+      <Label layoutX="754.0" layoutY="140.0" prefHeight="35.0" prefWidth="157.0" text="DFS Runtime: " />
+      <TextField fx:id="dfs_runtime" editable="false" layoutX="911.0" layoutY="140.0" prefHeight="35.0" prefWidth="100.0" />
    </children>
 </AnchorPane>

@@ -26,8 +26,8 @@
 
 /* Apply to all labels */
 .label {
-    -fx-font-family: 'Arial';
-    -fx-font-size: 14pt;
+    -fx-font-family: 'Algerian';
+    -fx-font-size: 18pt;
     -fx-font-weight: bold;
     -fx-text-fill: #333333;
 }

@@ -25,6 +25,11 @@ import java.util.*;
 import static com.khanfar.astar_and_dfs.HelloController.graph;
 
 public class Home implements Initializable {
+    @FXML
+    private TextField a_star_runtime;
+
+    @FXML
+    private TextField dfs_runtime;
 
     @FXML
     private RadioButton a_Star;
@@ -66,8 +71,12 @@ public class Home implements Initializable {
         }
         path.clear();
         if (a_Star.isSelected()){
+
             graph.loadDistanceRoads("D:\\Artificial Intelligence\\AStar_And_DFS\\roads.csv");
             graph.loadDistanceAir("D:\\Artificial Intelligence\\AStar_And_DFS\\airDistance.csv" , dest.getValue());
+
+            long startTime = System.currentTimeMillis();
+
             Astar astar = new Astar(graph) ;
             astar.findShortestPath(src.getValue());
 
@@ -84,6 +93,10 @@ public class Home implements Initializable {
                 path.setText(s);
 
                 distance.setText(DestV.getG_Cost() + "KM");
+
+                long endTime = System.currentTimeMillis();
+                long timeElapsed = endTime - startTime;
+                a_star_runtime.setText(String.valueOf(timeElapsed) + " ms");
             }
 
 
@@ -94,7 +107,7 @@ public class Home implements Initializable {
             graph1.loadDistanceAir("D:\\Artificial Intelligence\\AStar_And_DFS\\airDistance.csv" , dest.getValue());
 
             graph1.resetVisited();
-
+            long startTime = System.currentTimeMillis();
             DFS dfs = new DFS(graph1);
             List<Vertex> list = dfs.findPath(src.getValue() , dest.getValue());
                     if (list==null) {
@@ -108,6 +121,9 @@ public class Home implements Initializable {
                         printDFSPath(list);
 
                         distance.setText(dfs.findCostByPath(list) + " KM");
+                      long  endTime = System.currentTimeMillis();
+                      long  timeElapsed = endTime - startTime;
+                        dfs_runtime.setText(String.valueOf(timeElapsed) + " ms");
                     }
         }
 
@@ -254,9 +270,7 @@ public class Home implements Initializable {
             });
             current = end ;
             Vertex prev = current.getParent() ;
-            if (prev == null) {
-                return "NO-PATH ";
-            }
+
             while (prev != null) {
                 // str.append("   " + current.getName()  + "  And cost : " + current.getDV() + "----->" + prev.getName()  + "  And cost : " + prev.getDV() +"\n ##################################################\n");
                 stack.push("Move from " + prev.getLabel() +" to " + current.getLabel() +"-- " +current.getG_Cost() +"km");
