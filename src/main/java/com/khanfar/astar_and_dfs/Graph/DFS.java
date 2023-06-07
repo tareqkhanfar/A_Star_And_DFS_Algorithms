@@ -15,7 +15,7 @@ public class DFS {
 
 
 
-    public HashSet<Vertex> findPath(String src, String dest) {
+    public List<Vertex> findPath(String src, String dest) {
         Vertex startVertex = graph.search(src);
         Vertex endVertex = graph.search(dest);
 
@@ -24,24 +24,27 @@ public class DFS {
         }
 
         Stack<Vertex> stack = new Stack<>();
-        HashSet<Vertex> visited = new HashSet<>();
-
-        stack.push(startVertex);
+        HashMap<Vertex, Vertex> pathMap = new HashMap<>();
         startVertex.setVisited(true);
+        stack.push(startVertex);
 
         while (!stack.isEmpty()) {
             Vertex currentVertex = stack.pop();
-            visited.add(currentVertex);
 
             if (currentVertex.getLabel().equals(dest)) {
-
-                return visited; // Return visited nodes if destination is found
+                // Trace back the path from the destination to the source
+                List<Vertex> path = new LinkedList<>();
+                for (Vertex v = endVertex; v != null; v = pathMap.get(v)) {
+                    path.add(0, v);
+                }
+                return path;
             }
 
             for (VertexFromTo entry : graph.getGraph().get(currentVertex)) {
                 Vertex adjacentVertex = entry.getTo();
                 if (!adjacentVertex.isVisited()){
                     adjacentVertex.setVisited(true);
+                    pathMap.put(adjacentVertex, currentVertex); // Store the predecessor
                     stack.push(adjacentVertex);
                 }
             }
@@ -49,6 +52,29 @@ public class DFS {
 
         return null; // Return null if no path found
     }
+
+    public double  findCostByPath(List<Vertex> path) {
+        double cost = 0 ;
+        for (int i = 0 ;i < path.size()-1 ; i++) {
+          cost+= costBetweenTwoCities(path.get(i) , path.get(i+1));
+        }
+        return cost;
+
+    }
+    private double costBetweenTwoCities (Vertex v1 , Vertex v2 ) {
+        double cost = 0;
+        HashSet<VertexFromTo> adjacent = graph.getGraph().get(v1);
+        for (VertexFromTo vertex : adjacent){
+            if (vertex.getTo().getLabel().equals(v2.getLabel())){
+                cost = vertex.getCost();
+                return cost;
+            }
+        }
+        return cost;
+
+    }
+
+
 
 
 

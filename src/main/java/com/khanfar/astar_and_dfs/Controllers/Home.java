@@ -49,6 +49,8 @@ public class Home implements Initializable {
     @FXML
     private ComboBox<String> src;
 
+    private static final String noPath = "NO-PATH" ;
+
     @FXML
     void destOnAction(ActionEvent event) {
 
@@ -56,12 +58,33 @@ public class Home implements Initializable {
 
     @FXML
     void runOnAction(ActionEvent event) {
+        if (src.getValue() == null || dest.getValue()==null) {
+            path.setText("SELECT SRC and DEST !");
+            distance.clear();
+            return;
+        }
         path.clear();
         if (a_Star.isSelected()){
             graph.loadDistanceRoads("D:\\Artificial Intelligence\\AStar_And_DFS\\roads.csv");
             graph.loadDistanceAir("D:\\Artificial Intelligence\\AStar_And_DFS\\airDistance.csv" , dest.getValue());
             Astar astar = new Astar(graph) ;
             astar.findShortestPath(src.getValue());
+
+            Vertex DestV = graph.search(dest.getValue()) ;
+
+            String s =  printPath(DestV);
+
+
+            if (s.equals(noPath)) {
+                path.setText(noPath);
+                distance.setText("N/A");
+            }
+            else {
+                path.setText(s);
+
+                distance.setText(DestV.getG_Cost() + "KM");
+            }
+
 
         } else if (dfs.isSelected()) {
             Graph graph1 = new Graph() ;
@@ -72,23 +95,21 @@ public class Home implements Initializable {
             graph1.resetVisited();
 
             DFS dfs = new DFS(graph1);
-            path.setText(dfs.findPath(src.getValue() , dest.getValue()).toString());
+            List<Vertex> list = dfs.findPath(src.getValue() , dest.getValue());
+                    if (list==null) {
+                        path.setText(noPath);
+                        distance.setText("N/A");
+                    }
+                    else {
+                        for (Vertex vertex : list) {
+                            path.appendText(vertex.getLabel() + "-->");
+                        }
+                        printDFSPath(list);
 
+                        distance.setText(dfs.findCostByPath(list) + " KM");
+                    }
         }
 
-        Vertex srcV = graph.search(src.getValue()) ;
-        Vertex DestV = graph.search(dest.getValue()) ;
-
-        String s =  printPath(srcV , DestV);
-        if (DestV.getParent().getG_Cost() == Integer.MAX_VALUE) {
-            path.setText("no path");
-            distance.setText("N/A");
-
-        }
-        else {
-            path.setText(s);
-            distance.setText(DestV.getG_Cost() + "");
-        }
 
         src.setValue(null);
         dest.setValue(null);
@@ -212,7 +233,8 @@ public class Home implements Initializable {
 
     static Vertex  current  ;
     public static  LinkedList<Line> list = new LinkedList<>();
-    public static String printPath(Vertex start, Vertex end) {
+    public static String printPath( Vertex end) {
+
         current = null ;
         StringBuilder str= new StringBuilder();
         Stack<String> stack = new Stack<>() ;
@@ -230,6 +252,9 @@ public class Home implements Initializable {
             });
             current = end ;
             Vertex prev = current.getParent() ;
+            if (prev == null) {
+                return "NO-PATH ";
+            }
             while (prev != null) {
                 // str.append("   " + current.getName()  + "  And cost : " + current.getDV() + "----->" + prev.getName()  + "  And cost : " + prev.getDV() +"\n ##################################################\n");
                 stack.push("Move from " + prev.getLabel() +" to " + current.getLabel() +"-- " +current.getG_Cost() +"km");
@@ -268,4 +293,41 @@ public class Home implements Initializable {
         return str.toString() ;
 
     }
+
+    public static void printDFSPath (List<Vertex> path) {
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                for (Line n : list) {
+                    pane.getChildren().removeAll(n);
+                    n.setVisible(false);
+
+                }
+            }
+        });
+
+        for (int i = 0 ; i < path.size()-1; i++) {
+
+            Point2D point2D = getPositionOnScreen(path.get(i).getLongitude() , path.get(i).getLatitude());
+            Point2D  point2D1 = getPositionOnScreen(path.get(i+1).getLongitude() , path.get(i+1).getLatitude());
+
+            Platform.runLater(new Runnable() {
+                @Override
+                public void run() {
+                    Line line = new Line(point2D.getX() , point2D.getY(), point2D1.getX() , point2D1.getY()) ;
+                    line.setFill(Color.RED);
+                    line.setStroke(Color.RED);
+                    line.setStrokeWidth(5);
+
+                    list.add(line);
+                    pane.getChildren().addAll(line );
+                    scrollPane.setContent(pane);
+                }
+            });
+        }
+
+
+    }
+
+
 }
