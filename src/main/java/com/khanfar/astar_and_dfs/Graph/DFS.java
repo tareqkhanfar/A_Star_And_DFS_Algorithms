@@ -53,15 +53,17 @@ public class DFS {
         return null; // Return null if no path found
     }
 
-    public double  findCostByPath(List<Vertex> path) {
+    public double  findCostByPath(StringBuilder str , List<Vertex> path) {
         double cost = 0 ;
         for (int i = 0 ;i < path.size()-1 ; i++) {
-          cost+= costBetweenTwoCities(path.get(i) , path.get(i+1));
+          double temp = costBetweenTwoCities( path.get(i) , path.get(i+1));
+          str.append("Move from " + path.get(i).getLabel() +" to " + path.get(i+1).getLabel() +"-- " +temp+"km\n");
+          cost+=temp;
         }
         return cost;
 
     }
-    private double costBetweenTwoCities (Vertex v1 , Vertex v2 ) {
+    private double costBetweenTwoCities ( Vertex v1 , Vertex v2 ) {
         double cost = 0;
         HashSet<VertexFromTo> adjacent = graph.getGraph().get(v1);
         for (VertexFromTo vertex : adjacent){

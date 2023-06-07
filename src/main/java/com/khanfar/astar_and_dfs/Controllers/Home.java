@@ -22,6 +22,7 @@ import javafx.scene.text.FontWeight;
 import java.net.URL;
 import java.util.*;
 
+import static com.khanfar.astar_and_dfs.HelloController.FILE_NAME;
 import static com.khanfar.astar_and_dfs.HelloController.graph;
 
 public class Home implements Initializable {
@@ -71,7 +72,8 @@ public class Home implements Initializable {
         }
         path.clear();
         if (a_Star.isSelected()){
-
+            Graph graph = new Graph();
+            graph.loadDataFromFile(FILE_NAME);
             graph.loadDistanceRoads("D:\\Artificial Intelligence\\AStar_And_DFS\\roads.csv");
             graph.loadDistanceAir("D:\\Artificial Intelligence\\AStar_And_DFS\\airDistance.csv" , dest.getValue());
 
@@ -83,7 +85,7 @@ public class Home implements Initializable {
             Vertex DestV = graph.search(dest.getValue()) ;
 
             String s =  printPath(DestV);
-
+               graph.printGraph();
 
             if (s.equals(noPath)) {
                 path.setText(noPath);
@@ -91,7 +93,6 @@ public class Home implements Initializable {
             }
             else {
                 path.setText(s);
-
                 distance.setText(DestV.getG_Cost() + "KM");
 
                 long endTime = System.currentTimeMillis();
@@ -115,12 +116,12 @@ public class Home implements Initializable {
                         distance.setText("N/A");
                     }
                     else {
-                        for (Vertex vertex : list) {
-                            path.appendText(vertex.getLabel() + "-->");
-                        }
-                        printDFSPath(list);
 
-                        distance.setText(dfs.findCostByPath(list) + " KM");
+                        printDFSPath(list);
+                        StringBuilder str = new StringBuilder();
+                        double finalDistance  = dfs.findCostByPath(str , list);
+                        path.setText(str.toString());
+                        distance.setText( finalDistance+ " KM");
                       long  endTime = System.currentTimeMillis();
                       long  timeElapsed = endTime - startTime;
                         dfs_runtime.setText(String.valueOf(timeElapsed) + " ms");
@@ -211,7 +212,6 @@ public class Home implements Initializable {
                         Font font = Font.font("Algerian", FontWeight.BOLD, 35);
                         label.setFont(font);                    }
                 });
-                System.out.println(button.getText());
 
 
             });

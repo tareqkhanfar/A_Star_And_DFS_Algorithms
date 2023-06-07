@@ -5,9 +5,10 @@ import java.util.*;
 public class Astar {
 private HashMap <Vertex , HashSet<VertexFromTo>> graph ;
 
-public Astar (Graph graph) {
-    this.graph = graph.getGraph() ;
-}
+    public Astar(Graph graph) {
+        this.graph = graph.getGraph();
+    }
+
 
 
 
@@ -40,7 +41,6 @@ public void findShortestPath (String src) {
     s.setG_Cost(0);
     heap.add(s);
 
-   // System.out.println(search(src).toString());
 
 
 
@@ -55,7 +55,7 @@ public void findShortestPath (String src) {
 
                   if (!w.isVisited()) {
 
-                          if ( vertex.getG_Cost() + u.getCost() + w.getH_Cost() < w.getF_Cost()) {
+                          if (vertex.getG_Cost() + u.getCost() + w.getH_Cost() < w.getF_Cost()) {
                               w.setF_Cost(vertex.getG_Cost() + u.getCost() + w.getH_Cost());
                               w.setG_Cost(vertex.getG_Cost() + u.getCost());
                               w.setParent(vertex);

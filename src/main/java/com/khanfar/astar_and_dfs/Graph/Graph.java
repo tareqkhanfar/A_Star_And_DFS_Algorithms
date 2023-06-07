@@ -13,7 +13,11 @@ public class Graph {
 
     public void printGraph () {
         for (Map.Entry<Vertex , HashSet<VertexFromTo>> entry  :this.graph.entrySet()) {
-            System.out.println(entry.getKey());
+            System.out.print(entry.getKey().getLabel() +": ");
+            for (VertexFromTo vertex : entry.getValue()){
+                System.out.print(vertex.getTo().getLabel()+" # ");
+            }
+            System.out.println();
         }
     }
 
