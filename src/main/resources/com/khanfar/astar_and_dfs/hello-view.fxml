@@ -10,7 +10,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1367.0" styleClass="home" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.khanfar.astar_and_dfs.Controllers.Home">
+<AnchorPane fx:id="home" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1367.0" style="-fx-background-color: #87CEEB;" styleClass="home" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.khanfar.astar_and_dfs.Controllers.Home">
    <children>
       <ScrollPane fx:id="displayImage" prefHeight="640.0" prefWidth="715.0" />
       <ComboBox fx:id="src" layoutX="1145.0" layoutY="36.0" onAction="#srcOnAction" prefHeight="35.0" prefWidth="205.0" promptText="SRC" styleClass="selects" />
@@ -20,18 +20,18 @@
             <String fx:value="selects" />
             <String fx:value="run" />
          </styleClass></Button>
-      <TextArea id="tf" fx:id="path" layoutX="1129.0" layoutY="225.0" prefHeight="204.0" prefWidth="223.0" promptText="PATH">
+      <TextArea id="tf" fx:id="path" layoutX="1088.0" layoutY="225.0" prefHeight="204.0" prefWidth="264.0" promptText="PATH">
          <styleClass>
             <String fx:value="t" />
             <String fx:value="selects" />
          </styleClass></TextArea>
-      <TextField fx:id="distance" layoutX="1129.0" layoutY="470.0" prefHeight="59.0" prefWidth="223.0" promptText="DISTANCE">
+      <TextField fx:id="distance" layoutX="1088.0" layoutY="470.0" prefHeight="59.0" prefWidth="264.0" promptText="DISTANCE">
          <styleClass>
             <String fx:value="t" />
             <String fx:value="selects" />
          </styleClass></TextField>
-      <Label layoutX="755.0" layoutY="28.0" prefHeight="35.0" prefWidth="100.0" text="select algorithm" />
-      <RadioButton fx:id="a_Star" layoutX="870.0" layoutY="37.0" mnemonicParsing="false" text="A *" />
-      <RadioButton fx:id="dfs" layoutX="937.0" layoutY="37.0" mnemonicParsing="false" text="DFS" />
+      <Label layoutX="811.0" layoutY="19.0" prefHeight="35.0" prefWidth="205.0" text="Select Algorithm" />
+      <RadioButton fx:id="a_Star" layoutX="824.0" layoutY="63.0" mnemonicParsing="false" text="A *" />
+      <RadioButton fx:id="dfs" layoutX="928.0" layoutY="63.0" mnemonicParsing="false" text="DFS" />
    </children>
 </AnchorPane>

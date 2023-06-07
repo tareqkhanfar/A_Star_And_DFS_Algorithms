@@ -17,6 +17,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 import java.net.URL;
 import java.util.*;
@@ -191,7 +192,8 @@ public class Home implements Initializable {
                     @Override
                     public void run() {
                         label.setText(button.getText());
-                    }
+                        Font font = Font.font("Algerian", FontWeight.BOLD, 35);
+                        label.setFont(font);                    }
                 });
                 System.out.println(button.getText());
 

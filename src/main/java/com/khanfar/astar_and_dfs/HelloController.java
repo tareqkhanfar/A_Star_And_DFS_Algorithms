@@ -46,7 +46,7 @@ public class HelloController {
         Parent parent = fxmlLoader.load();
 
         Scene scene = new Scene(parent);
-       //scene.getStylesheets().addAll(HelloApplication.class.getResource("style.css").toExternalForm());
+       scene.getStylesheets().addAll(HelloApplication.class.getResource("home.css").toExternalForm());
         Stage stage = new Stage() ;
         stage.setTitle("shortest path !");
         stage.setScene(scene);

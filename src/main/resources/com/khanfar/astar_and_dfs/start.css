@@ -1,0 +1,26 @@
+/* Apply to the anchor pane */
+.anchor-pane {
+    -fx-background-color: #050f36;
+}
+
+/* Apply to all buttons */
+.button {
+    -fx-background-color: #0099ff;
+    -fx-text-fill: white;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.button:hover {
+    -fx-background-color: #007acc;
+}
+
+/* Apply to all labels */
+.label {
+    -fx-font-family: 'Algerian';
+    -fx-font-size: 38pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}

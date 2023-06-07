@@ -16,7 +16,10 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("start.fxml"));
+
         Scene scene = new Scene(fxmlLoader.load());
+        scene.getStylesheets().add(getClass().getResource("start.css").toExternalForm());
+
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();

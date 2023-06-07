@@ -1,0 +1,57 @@
+/* Apply to the anchor pane */
+.anchor-pane {
+    -fx-background-color: #f0f0f0;
+}
+
+/* Apply to all buttons */
+.button {
+    -fx-background-color: #0099ff;
+    -fx-text-fill: white;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.button:hover {
+    -fx-background-color: #007acc;
+}
+
+/* Apply to all radio buttons */
+.radio-button {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14pt;
+    -fx-text-fill: #333333;
+}
+
+/* Apply to all labels */
+.label {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+/* Apply to all textfields */
+.text-field {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14pt;
+    -fx-text-fill: #333333;
+    -fx-background-color: white;
+}
+
+/* Apply to all text areas */
+.text-area {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14pt;
+    -fx-text-fill: #333333;
+    -fx-background-color: white;
+}
+
+/* Apply to all combo boxes */
+.combo-box {
+    -fx-font-family: 'Arial';
+    -fx-font-size: 14pt;
+    -fx-text-fill: #333333;
+    -fx-background-color: white;
+}
