@@ -1,0 +1,36 @@
+City1,City2,Distance
+Ramallah,Jenin,101
+Jenin,Ramallah,101
+Ramallah,Nablus,80.2
+Nablus,Ramallah,80.2
+Ramallah,Jericho,51.5
+Jericho,Ramallah,51.5
+Jenin,Nablus,43.3
+Nablus,Jenin,43.3
+Qalqilya,Jenin,94
+Jenin,Qalqilya,94
+Jerusalem,Hebron,149
+Hebron,Jerusalem,149
+Tulkarm,Ramallah,83.2
+Ramallah,Tulkarm,83.2
+Tulkarm,Jenin,50
+Jenin,Tulkarm,50
+Tulkarm,Jerusalem,93.5
+Jerusalem,Tulkarm,93.5
+Tulkarm,Jericho,128
+Jericho,Tulkarm,128
+Ramallah,Bethlehem,11.2
+Bethlehem,Ramallah,11.2
+Jenin,Bethlehem,92.5
+Bethlehem,Jenin,92.5
+Gaza City,Rafah,33.4
+Rafah,Gaza City,33.4
+Gaza City,Khan Yunis,24.3
+Khan Yunis,Gaza City,24.3
+Gaza City,Deir al-Balah,20
+Deir al-Balah,Gaza City,20
+Gaza City,Jerusalem,76.6
+Jerusalem,Gaza City,76.6
+Bethlehem,Jerusalem,9.3
+alramah,Ramallah,79.2
+Ramallah,alramah,79.2

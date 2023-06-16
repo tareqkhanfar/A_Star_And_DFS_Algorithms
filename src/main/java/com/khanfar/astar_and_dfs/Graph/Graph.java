@@ -74,37 +74,46 @@ public class Graph {
         }
 
     }
+
+
     public void resetVisited() {
         for (Vertex vertex : graph.keySet()) {
             vertex.setVisited(false);
         }
     }
 
-    public void loadDistanceAir(String fileName , String dest) {
-        /*
+    public void loadDistanceAir(String fileName, String dest) {
+
         try {
-            Scanner in = new Scanner(new File(fileName));
+            Scanner in = new Scanner(new File("airDistance.csv"));
             in.nextLine();
             String str[] ;
             while (in.hasNext()) {
                 str = in.nextLine().split(",");
+                String cityNameSrc = str[0] , CityNameDest = str[1]  ;
+                int distance = Integer.parseInt(str[2]);
+                if (CityNameDest.equals(dest) ) {
+                    Vertex vSrc = search(cityNameSrc);
+                    vSrc.setH_Cost(distance);
+                }
 
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
 
-         */
-
+/*
         Vertex vDest = search(dest);
         for (Vertex vertex : graph.keySet()){
             int airDistance = distance(vertex.getLatitude() , vDest.getLatitude() , vertex.getLongitude() , vDest.getLongitude());
             vertex.setH_Cost(airDistance);
         }
 
-
+ */
 
     }
+
+
     public static int distance(double lat1,
                                double lat2, double lon1,
                                double lon2)

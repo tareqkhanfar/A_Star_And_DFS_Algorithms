@@ -1,0 +1,256 @@
+Qalqilya,Qalqilya,0
+Qalqilya,Beit Lahia,83
+Qalqilya,Jabalia,86
+Qalqilya,Gaza City,89
+Qalqilya,Khan Yunis,112
+Qalqilya,Tulkarm,14
+Qalqilya,Jenin,43
+Qalqilya,alramah,32
+Qalqilya,Hebron,73
+Qalqilya,Ramallah,38
+Qalqilya,Jerusalem,51
+Qalqilya,Nablus,27
+Qalqilya,Rafah,115
+Qalqilya,Bethlehem,57
+Qalqilya,Deir al-Balah,104
+Qalqilya,Jericho,58
+Beit Lahia,Qalqilya,83
+Beit Lahia,Beit Lahia,0
+Beit Lahia,Jabalia,3
+Beit Lahia,Gaza City,6
+Beit Lahia,Khan Yunis,29
+Beit Lahia,Tulkarm,98
+Beit Lahia,Jenin,126
+Beit Lahia,alramah,114
+Beit Lahia,Hebron,56
+Beit Lahia,Ramallah,76
+Beit Lahia,Jerusalem,71
+Beit Lahia,Nablus,103
+Beit Lahia,Rafah,31
+Beit Lahia,Bethlehem,68
+Beit Lahia,Deir al-Balah,22
+Beit Lahia,Jericho,96
+Jabalia,Qalqilya,86
+Jabalia,Beit Lahia,3
+Jabalia,Jabalia,0
+Jabalia,Gaza City,2
+Jabalia,Khan Yunis,26
+Jabalia,Tulkarm,101
+Jabalia,Jenin,129
+Jabalia,alramah,117
+Jabalia,Hebron,58
+Jabalia,Ramallah,80
+Jabalia,Jerusalem,74
+Jabalia,Nablus,107
+Jabalia,Rafah,28
+Jabalia,Bethlehem,71
+Jabalia,Deir al-Balah,18
+Jabalia,Jericho,99
+Gaza City,Qalqilya,89
+Gaza City,Beit Lahia,6
+Gaza City,Jabalia,2
+Gaza City,Gaza City,0
+Gaza City,Khan Yunis,23
+Gaza City,Tulkarm,104
+Gaza City,Jenin,132
+Gaza City,alramah,120
+Gaza City,Hebron,60
+Gaza City,Ramallah,82
+Gaza City,Jerusalem,76
+Gaza City,Nablus,109
+Gaza City,Rafah,25
+Gaza City,Bethlehem,73
+Gaza City,Deir al-Balah,15
+Gaza City,Jericho,101
+Khan Yunis,Qalqilya,112
+Khan Yunis,Beit Lahia,29
+Khan Yunis,Jabalia,26
+Khan Yunis,Gaza City,23
+Khan Yunis,Khan Yunis,0
+Khan Yunis,Tulkarm,127
+Khan Yunis,Jenin,155
+Khan Yunis,alramah,143
+Khan Yunis,Hebron,78
+Khan Yunis,Ramallah,105
+Khan Yunis,Jerusalem,98
+Khan Yunis,Nablus,133
+Khan Yunis,Rafah,7
+Khan Yunis,Bethlehem,94
+Khan Yunis,Deir al-Balah,8
+Khan Yunis,Jericho,123
+Tulkarm,Qalqilya,14
+Tulkarm,Beit Lahia,98
+Tulkarm,Jabalia,101
+Tulkarm,Gaza City,104
+Tulkarm,Khan Yunis,127
+Tulkarm,Tulkarm,0
+Tulkarm,Jenin,30
+Tulkarm,alramah,21
+Tulkarm,Hebron,86
+Tulkarm,Ramallah,48
+Tulkarm,Jerusalem,62
+Tulkarm,Nablus,24
+Tulkarm,Rafah,129
+Tulkarm,Bethlehem,69
+Tulkarm,Deir al-Balah,119
+Tulkarm,Jericho,64
+Jenin,Qalqilya,43
+Jenin,Beit Lahia,126
+Jenin,Jabalia,129
+Jenin,Gaza City,132
+Jenin,Khan Yunis,155
+Jenin,Tulkarm,30
+Jenin,Jenin,0
+Jenin,alramah,12
+Jenin,Hebron,105
+Jenin,Ramallah,63
+Jenin,Jerusalem,77
+Jenin,Nablus,26
+Jenin,Rafah,158
+Jenin,Bethlehem,85
+Jenin,Deir al-Balah,148
+Jenin,Jericho,69
+alramah,Qalqilya,32
+alramah,Beit Lahia,114
+alramah,Jabalia,117
+alramah,Gaza City,120
+alramah,Khan Yunis,143
+alramah,Tulkarm,21
+alramah,Jenin,12
+alramah,alramah,0
+alramah,Hebron,92
+alramah,Ramallah,50
+alramah,Jerusalem,65
+alramah,Nablus,14
+alramah,Rafah,145
+alramah,Bethlehem,72
+alramah,Deir al-Balah,135
+alramah,Jericho,58
+Hebron,Qalqilya,73
+Hebron,Beit Lahia,56
+Hebron,Jabalia,58
+Hebron,Gaza City,60
+Hebron,Khan Yunis,78
+Hebron,Tulkarm,86
+Hebron,Jenin,105
+Hebron,alramah,92
+Hebron,Hebron,0
+Hebron,Ramallah,42
+Hebron,Jerusalem,28
+Hebron,Nablus,78
+Hebron,Rafah,75
+Hebron,Bethlehem,21
+Hebron,Deir al-Balah,73
+Hebron,Jericho,49
+Ramallah,Qalqilya,38
+Ramallah,Beit Lahia,76
+Ramallah,Jabalia,80
+Ramallah,Gaza City,82
+Ramallah,Khan Yunis,105
+Ramallah,Tulkarm,48
+Ramallah,Jenin,63
+Ramallah,alramah,50
+Ramallah,Hebron,42
+Ramallah,Ramallah,0
+Ramallah,Jerusalem,15
+Ramallah,Nablus,36
+Ramallah,Rafah,105
+Ramallah,Bethlehem,22
+Ramallah,Deir al-Balah,98
+Ramallah,Jericho,24
+Jerusalem,Qalqilya,51
+Jerusalem,Beit Lahia,71
+Jerusalem,Jabalia,74
+Jerusalem,Gaza City,76
+Jerusalem,Khan Yunis,98
+Jerusalem,Tulkarm,62
+Jerusalem,Jenin,77
+Jerusalem,alramah,65
+Jerusalem,Hebron,28
+Jerusalem,Ramallah,15
+Jerusalem,Jerusalem,0
+Jerusalem,Nablus,50
+Jerusalem,Rafah,97
+Jerusalem,Bethlehem,7
+Jerusalem,Deir al-Balah,92
+Jerusalem,Jericho,25
+Nablus,Qalqilya,27
+Nablus,Beit Lahia,103
+Nablus,Jabalia,107
+Nablus,Gaza City,109
+Nablus,Khan Yunis,133
+Nablus,Tulkarm,24
+Nablus,Jenin,26
+Nablus,alramah,14
+Nablus,Hebron,78
+Nablus,Ramallah,36
+Nablus,Jerusalem,50
+Nablus,Nablus,0
+Nablus,Rafah,134
+Nablus,Bethlehem,58
+Nablus,Deir al-Balah,125
+Nablus,Jericho,44
+Rafah,Qalqilya,115
+Rafah,Beit Lahia,31
+Rafah,Jabalia,28
+Rafah,Gaza City,25
+Rafah,Khan Yunis,7
+Rafah,Tulkarm,129
+Rafah,Jenin,158
+Rafah,alramah,145
+Rafah,Hebron,75
+Rafah,Ramallah,105
+Rafah,Jerusalem,97
+Rafah,Nablus,134
+Rafah,Rafah,0
+Rafah,Bethlehem,92
+Rafah,Deir al-Balah,13
+Rafah,Jericho,122
+Bethlehem,Qalqilya,57
+Bethlehem,Beit Lahia,68
+Bethlehem,Jabalia,71
+Bethlehem,Gaza City,73
+Bethlehem,Khan Yunis,94
+Bethlehem,Tulkarm,69
+Bethlehem,Jenin,85
+Bethlehem,alramah,72
+Bethlehem,Hebron,21
+Bethlehem,Ramallah,22
+Bethlehem,Jerusalem,7
+Bethlehem,Nablus,58
+Bethlehem,Rafah,92
+Bethlehem,Bethlehem,0
+Bethlehem,Deir al-Balah,88
+Bethlehem,Jericho,29
+Deir al-Balah,Qalqilya,104
+Deir al-Balah,Beit Lahia,22
+Deir al-Balah,Jabalia,18
+Deir al-Balah,Gaza City,15
+Deir al-Balah,Khan Yunis,8
+Deir al-Balah,Tulkarm,119
+Deir al-Balah,Jenin,148
+Deir al-Balah,alramah,135
+Deir al-Balah,Hebron,73
+Deir al-Balah,Ramallah,98
+Deir al-Balah,Jerusalem,92
+Deir al-Balah,Nablus,125
+Deir al-Balah,Rafah,13
+Deir al-Balah,Bethlehem,88
+Deir al-Balah,Deir al-Balah,0
+Deir al-Balah,Jericho,117
+Jericho,Qalqilya,58
+Jericho,Beit Lahia,96
+Jericho,Jabalia,99
+Jericho,Gaza City,101
+Jericho,Khan Yunis,123
+Jericho,Tulkarm,64
+Jericho,Jenin,69
+Jericho,alramah,58
+Jericho,Hebron,49
+Jericho,Ramallah,24
+Jericho,Jerusalem,25
+Jericho,Nablus,44
+Jericho,Rafah,122
+Jericho,Bethlehem,29
+Jericho,Deir al-Balah,117
+Jericho,Jericho,0

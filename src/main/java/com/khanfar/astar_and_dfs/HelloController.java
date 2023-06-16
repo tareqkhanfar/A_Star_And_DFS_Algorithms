@@ -1,6 +1,7 @@
 package com.khanfar.astar_and_dfs;
 
 import com.khanfar.astar_and_dfs.Graph.Graph;
+import com.khanfar.astar_and_dfs.Graph.Vertex;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +11,9 @@ import javafx.scene.control.Alert;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class HelloController {
@@ -19,8 +22,32 @@ public class HelloController {
 
 
     @FXML
-    void generateEdgesOnAction(ActionEvent event) {
+    void HuristicOnAction(ActionEvent event) {
+        StringBuilder builder = new StringBuilder() ;
+        for (Vertex vertex : graph.getGraph().keySet()) {
+            for (Vertex vertex1 : graph.getGraph().keySet()) {
+                int distance = Graph.distance(vertex.getLatitude() , vertex1.getLatitude() , vertex.getLongitude() , vertex1.getLongitude());
+                builder.append(vertex.getLabel()+","+vertex1.getLabel()+","+distance+"\n");
+            }
+        }
+        printHuristicValueToFile(builder);
+    }
 
+    public void printHuristicValueToFile(StringBuilder stringBuilder) {
+        try {
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(new File("airDistance.csv"))) ;
+            bufferedWriter.write(stringBuilder.toString()  , 0 , stringBuilder.length());
+            bufferedWriter.flush();
+            bufferedWriter.close();
+            Alert a = new Alert(Alert.AlertType.NONE);
+            a.setAlertType(Alert.AlertType.INFORMATION);
+            a.setContentText("Data Saved Sucsessfully   ");
+            // show the dialog
+            a.show();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
